@@ -1,8 +1,6 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
-using UnityEditor;
-using UnityEditor.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -16,7 +14,6 @@ public class MainMenu : MonoBehaviour
     {
         int savingMethodSelection = int.Parse(storageGroup.GetFirstActiveToggle().name);
         StateManager.Instance.SelectSavingMethod(savingMethodSelection);
-        SceneManager.LoadScene(1);
-        //EditorSceneManager.LoadSceneAsyncInPlayMode("Assets/Scenes/GameScene.unity", new LoadSceneParameters());
+        SceneManager.LoadScene("GameScene");
     }
 }
